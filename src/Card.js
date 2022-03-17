@@ -1,7 +1,7 @@
-export default function Card(){
+export default function Card(props){
     return(
-        <div>
-            <p>Texto</p>
+        <div className="card">
+            <p>{props.nome}</p>
             <ion-icon name="play-outline"></ion-icon>
         </div>
     )

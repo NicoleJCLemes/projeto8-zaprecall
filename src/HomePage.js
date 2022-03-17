@@ -5,7 +5,7 @@ export default function HomePage(){
                 <img src="./assets/logo.png" alt="ZapRecall logo" />
                 <h1>ZapRecall</h1>
             </div>
-            <button>Iniciar Recall!!</button>
+            <button onClick={() => setVisibility('false')}>Iniciar Recall!!</button>
         </section>
     )
 }

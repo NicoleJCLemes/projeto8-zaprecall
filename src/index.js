@@ -1,14 +1,5 @@
 import ReactDOM from 'react-dom';
-import HomePage from "./HomePage";
-import DeckPage from "./DeckPage";
-
-function App(){
-    return(
-        <>
-            <HomePage />
-            <DeckPage />
-        </>
-    )
-}
+import React from 'react';
+import App from "./App"
 
 ReactDOM.render(<App />, document.querySelector('.root'));
