@@ -4,17 +4,13 @@ import React from 'react';
 
 export default function App(){
     const [visibility, setVisibility] = React.useState('true')
-    if(visibility === true){
-        return(
-            <>
-                <HomePage />
-            </>
-        )
-    } if (visibility === false){
-        return(
-            <>
-                <DeckPage />
-            </>
-        )
-    }
+    return visibility === 'true' ? (
+        <>
+            <HomePage callback={(update) => setVisibility(update)}/>
+        </>
+    ) : (
+        <>
+            <DeckPage />
+        </>
+    )
 }
