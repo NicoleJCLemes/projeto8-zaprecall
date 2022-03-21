@@ -1,11 +1,28 @@
 export default function CardResult(props) {
-    return(
-        <div className="cardName">
-            <p className={props.color}>{props.name}</p>
-            <ion-icon name="close-circle-outline"></ion-icon>
-        </div>
-    )
+    if(props.color === 'red'){
+        let cssRed = `cardName ${props.color}`
+        return(
+            <div className={cssRed}>
+                <p>{props.name}</p>
+                <ion-icon name="close-circle"></ion-icon>
+            </div>
+        )
+    } else if (props.color === 'orange'){
+        let cssOrange = `cardName ${props.color}`
+        return(
+            <div className={cssOrange}>
+                <p>{props.name}</p>
+                <ion-icon name="help-circle"></ion-icon>
+            </div>
+        )
+    } else if (props.color === 'green'){
+        let cssGreen = `cardName ${props.color}`
+        return(
+            <div className={cssGreen}>
+                <p>{props.name}</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+        )
+    }
 }
 
-// <ion-icon name="help-circle"></ion-icon>
-//<ion-icon name="checkmark-circle"></ion-icon>

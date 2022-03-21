@@ -225,25 +225,31 @@
 }
 
 .red ion-icon{
-    background-color: #FF3030;
+    color: #FF3030;
+    border-radius: 50%;
 }
 
 .red p {
     text-decoration: line-through #FF3030;
+    color:#FF3030
 }
 
 .orange ion-icon{
-    background-color: #FF922E;
+    color: #FF922E;
+    border-radius: 50%;
 }
 
 .orange p {
     text-decoration: line-through #FF922E;
+    color: #FF922E;
 }
 
 .green ion-icon{
-    background-color: #2FBE34;
+    color: #2FBE34;
+    border-radius: 50%;
 }
 
 .green p {
     text-decoration: line-through #2FBE34;
+    color: #2FBE34;
 }

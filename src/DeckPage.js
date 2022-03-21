@@ -40,7 +40,7 @@ export default function DeckPage(){
             <section>
                 {
                     cards.map(card => 
-                        <Card key={card.question} name={card.name} question={card.question} answer={card.answer} callback={(update) => setAnsweredQuestions(update)} />
+                        <Card key={card.name} variable={answeredQuestions} name={card.name} question={card.question} answer={card.answer} callback={(update) => setAnsweredQuestions(update)} />
                         )
                 }
             </section>
