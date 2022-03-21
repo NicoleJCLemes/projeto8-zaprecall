@@ -90,7 +90,7 @@
 }
 
 .deck-page section {
-    margin: 130px 0 80px 0;
+    margin: 130px 0 90px 0;
     z-index: 0;
     overflow-y: scroll;
 }
@@ -224,4 +224,26 @@
     background-color: #2FBE34;
 }
 
+.red ion-icon{
+    background-color: #FF3030;
+}
 
+.red p {
+    text-decoration: line-through #FF3030;
+}
+
+.orange ion-icon{
+    background-color: #FF922E;
+}
+
+.orange p {
+    text-decoration: line-through #FF922E;
+}
+
+.green ion-icon{
+    background-color: #2FBE34;
+}
+
+.green p {
+    text-decoration: line-through #2FBE34;
+}

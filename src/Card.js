@@ -1,31 +1,28 @@
 import React from 'react';
+import CardAnswer from './CardAnswer';
+import CardQuestion from './CardQuestion';
+import QuestionName from './QuestionName';
+import CardResult from './CardResult';
+
 export default function Card(props){
-    const [content, setContent] = React.useState('questionName')
+    const [content, setContent] = React.useState('questionName');
+    const [color, setColor] = React.useState("");
     if(content === 'questionName'){
         return(
-            <div onClick={() => setContent('questionTitle')} className="cardName">
-                <p>{props.name}</p>
-                <ion-icon name="play-outline"></ion-icon>
-            </div>
+            <QuestionName name={props.name} callback={(update) => setContent(update)} />
         )
     } else if (content === 'questionTitle'){
         return(
-            <div className="cardQuestion">
-                <p>{props.question}</p>
-                <img onClick={() => setContent('questionAnswer')} src="./assets/setinha.png" alt="flip arrow"/>
-            </div>
+            <CardQuestion question={props.question} callback={((update) => setContent(update))} />
         )
     } else if (content === 'questionAnswer') {
         return(
-            <div className="cardAnswer">
-                <p>{props.answer}</p>
-                <div className='buttons'>
-                    <button className='not'>Não lembrei</button>
-                    <button className='almost'>Quase não lembrei</button>
-                    <button className='right'>Zap!</button>
-                </div>
-            </div>
+            <CardAnswer color={color} callback={((update) => setColor(update))} answer={props.answer} />
         )
+    } else if (content === 'questionResult') {
+        return(
+            <CardResult name={props.name} color={color} callback={((update) => setColor(update))}/>
+    )
     }
     
 }
