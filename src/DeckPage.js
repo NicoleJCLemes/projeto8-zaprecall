@@ -1,5 +1,5 @@
 import Card from "./Card";
-import Icons from "./Icons";
+import Footer from "./Footer";
 import React from "react";
 
 export default function DeckPage(){
@@ -13,6 +13,8 @@ export default function DeckPage(){
         {question:"Usamos props para __", answer:"passar diferentes informações para componentes"},
         {question:"Usamos estado (state) para __", answer:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
     ]
+
+    const totalCards = 8;
 
     const cardName = ["Pergunta 1", "Pergunta 2", "Pergunta 3", "Pergunta 4", "Pergunta 5", "Pergunta 6", "Pergunta 7", "Pergunta 8"]
 
@@ -46,10 +48,7 @@ export default function DeckPage(){
                         )
                 }
             </section>
-            <footer>
-                <p>{answeredQuestions}/8 CONCLUÍDOS</p>
-                <Icons color={color} />
-            </footer>
+            <Footer color={color} answeredQuestions={answeredQuestions} totalCards={totalCards} />
         </div>
     )
 }

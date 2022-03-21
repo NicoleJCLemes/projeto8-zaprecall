@@ -109,6 +109,7 @@
     line-height: 22px;
     color: #333333;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -253,3 +254,16 @@
     text-decoration: line-through #2FBE34;
     color: #2FBE34;
 }
+
+footer .congrats {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-family: 'Recursive', sans-serif;
+}
+
+.deck-page .congrats-footer {
+    height: 171px;
+    justify-content: space-evenly;
+}
+
