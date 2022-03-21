@@ -257,13 +257,30 @@
 
 footer .congrats {
     display: flex;
-    justify-content: center;
     font-weight: 700;
     font-family: 'Recursive', sans-serif;
+}
+
+footer .congrats img {
+    margin-right: 5px;
 }
 
 .deck-page .congrats-footer {
     height: 171px;
     justify-content: space-evenly;
+    padding: 0 15px;
 }
 
+.deck-page .congrats-footer p {
+    text-align: center;
+    width: 100%;
+}
+
+.deck-page section {
+    margin-bottom: 171px;
+}
+
+.icons-footer {
+    display: flex;
+    justify-content: center;
+}

@@ -7,15 +7,15 @@ export default function CardAnswer(props){
                 <button onClick={() => {
                 props.callbackColor('red') 
                 props.callback('questionResult')
-                props.callbackAnswered(props.variable + 1)}} className='not'>Não lembrei</button>
+                props.callbackAnswered('red')}} className='not'>Não lembrei</button>
                 <button onClick={() => {
                 props.callbackColor('orange')
                 props.callback('questionResult')
-                props.callbackAnswered(props.variable + 1)}} className='almost'>Quase não lembrei</button>
+                props.callbackAnswered('orange')}} className='almost'>Quase não lembrei</button>
                 <button onClick={() => {
                 props.callbackColor('green')
                 props.callback('questionResult')
-                props.callbackAnswered(props.variable + 1)}} className='right'>Zap!</button>
+                props.callbackAnswered('green')}} className='right'>Zap!</button>
             </div>
         </div>
     )

@@ -32,8 +32,7 @@ export default function DeckPage(){
 
     nameCards();
 
-    const [answeredQuestions, setAnsweredQuestions] = React.useState(0);
-    const [color, setColor] = React.useState("");
+    const [answeredQuestions, setAnsweredQuestions] = React.useState([]);
 
     return(
         <div className="deck-page">
@@ -44,11 +43,11 @@ export default function DeckPage(){
             <section>
                 {
                     cards.map(card => 
-                        <Card key={card.name} color={color} callbackColor={((update) => setColor(update))} variable={answeredQuestions} name={card.name} question={card.question} answer={card.answer} callback={(update) => setAnsweredQuestions(update)} />
+                        <Card key={card.name} variable={answeredQuestions} name={card.name} question={card.question} answer={card.answer} callback={(update) => setAnsweredQuestions([...answeredQuestions, update])} />
                         )
                 }
             </section>
-            <Footer color={color} answeredQuestions={answeredQuestions} totalCards={totalCards} />
+            <Footer answeredQuestions={answeredQuestions} totalCards={totalCards} />
         </div>
     )
 }
