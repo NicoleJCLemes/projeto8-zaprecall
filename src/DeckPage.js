@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Icons from "./Icons";
 import React from "react";
 
 export default function DeckPage(){
@@ -30,6 +31,7 @@ export default function DeckPage(){
     nameCards();
 
     const [answeredQuestions, setAnsweredQuestions] = React.useState(0);
+    const [color, setColor] = React.useState("");
 
     return(
         <div className="deck-page">
@@ -40,12 +42,13 @@ export default function DeckPage(){
             <section>
                 {
                     cards.map(card => 
-                        <Card key={card.name} variable={answeredQuestions} name={card.name} question={card.question} answer={card.answer} callback={(update) => setAnsweredQuestions(update)} />
+                        <Card key={card.name} color={color} callbackColor={((update) => setColor(update))} variable={answeredQuestions} name={card.name} question={card.question} answer={card.answer} callback={(update) => setAnsweredQuestions(update)} />
                         )
                 }
             </section>
             <footer>
                 <p>{answeredQuestions}/8 CONCLUÍDOS</p>
+                <Icons color={color} />
             </footer>
         </div>
     )
